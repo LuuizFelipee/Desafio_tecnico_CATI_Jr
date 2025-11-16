@@ -70,7 +70,7 @@ with col_graf1:
   st.plotly_chart(grafico_boxplot, use_container_width=True)
 
 with col_graf2:
-  grafico_boxplot2 = px.box(
+  grafico_boxplot2 = px.bar(
       df,
       x='QualidadeGeral',
       y='Vizinhanca',
