@@ -59,7 +59,7 @@ st.subheader("Informações sobre o Dataset")
 col_graf1, col_graf2, col_graf3 = st.columns(3)
 
 with col_graf1:
-  grafico_boxplot = px.box(
+  grafico_boxplot = px.bar(
       df,
       x='PrecoVenda',
       y='Vizinhanca',
