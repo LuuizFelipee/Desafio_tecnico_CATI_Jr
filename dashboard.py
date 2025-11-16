@@ -29,8 +29,8 @@ col4.metric("Desvio padrão", f"{df['PrecoVenda'].std():.2f}")
 st.markdown("---")
 
 #Principais informações sobre Preço venda
-col_graf1, col_graf2 = st.columns(2)
 st.subheader("Informações sobre preço venda")
+col_graf1, col_graf2 = st.columns(2)
 
 with col_graf1:
    grafico_hist = px.histogram(
@@ -53,10 +53,10 @@ with col_graf2:
    st.plotly_chart(grafico_box, use_container_width=True)
 
 st.markdown("---")
+st.subheader("Informações sobre o Dataset")
 #Informações gerais sobre o Dataset
 col_graf1, col_graf2, col_graf3 = st.columns(3)
 
-st.subheader("Informações sobre o Dataset")
 
 with col_graf1:
   grafico_boxplot = px.box(
