@@ -54,9 +54,9 @@ with col_graf2:
 
 st.markdown("---")
 st.subheader("Informações sobre o Dataset")
+
 #Informações gerais sobre o Dataset
 col_graf1, col_graf2, col_graf3 = st.columns(3)
-
 
 with col_graf1:
   grafico_boxplot = px.box(
@@ -69,11 +69,16 @@ with col_graf1:
   grafico_boxplot.update_layout(title_x=0.1)
   st.plotly_chart(grafico_boxplot, use_container_width=True)
 
+media_por_bairro = df.groupby('Vizinhanca'),['QualidadeGeral'].mean().reset_index()
+media_por_bairro = media_por_bairro.sort_values(
+    by='QualidadeGeral',
+    ascending = False
+)
 with col_graf2:
-  grafico_boxplot2 = px.box(
-      df,
+  grafico_boxplot2 = px.bar(
+      media_por_bairro,
       x='QualidadeGeral',
-      y='PrecoVenda',
+      y='Vizinanca',
       title='Distribuição de Preço por Qualidade',
   )
   grafico_boxplot2.update_layout(title_x=0.1)
