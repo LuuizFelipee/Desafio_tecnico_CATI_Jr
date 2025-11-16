@@ -78,7 +78,7 @@ with col_graf2:
   grafico_boxplot2 = px.bar(
       media_por_bairro,
       x='QualidadeGeral',
-      y='Vizinanca',
+      y='Vizinhanca',
       title='Distribuição de Preço por Qualidade',
   )
   grafico_boxplot2.update_layout(title_x=0.1)
