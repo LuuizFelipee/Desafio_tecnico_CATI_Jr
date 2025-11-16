@@ -58,9 +58,14 @@ st.subheader("Informações sobre o Dataset")
 #Informações gerais sobre o Dataset
 col_graf1, col_graf2, col_graf3 = st.columns(3)
 
+media_por_bairro = df.groupby('Vizinhanca')['PrecoVenda'].mean().reset_index()
+media_por_bairro = media_por_bairro.sort_values(
+    by='PrecoVenda',
+    ascending = False
+)
 with col_graf1:
   grafico_boxplot = px.bar(
-      df,
+      media_por_bairro,
       x='PrecoVenda',
       y='Vizinhanca',
       title='Distribuição de Preços por Vizinhança',
