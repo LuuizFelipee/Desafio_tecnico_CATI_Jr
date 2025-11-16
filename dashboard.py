@@ -29,7 +29,6 @@ col4.metric("Desvio padrão", f"{df['PrecoVenda'].std():.2f}")
 st.markdown("---")
 
 #Principais informações sobre Preço venda
-st.subheader("Distribuição dos Preços")
 
 col_graf1, col_graf2 = st.columns(2)
 
@@ -38,17 +37,53 @@ with col_graf1:
             df,
             x='PrecoVenda',
             nbins=30,
-            title="Histograma de Preços",
+            title="Distribuição de Preços",
             labels={'PrecoVenda': 'Preços', 'count': ''}
+            color='PrecoVenda'
    )
    grafico_hist.update_layout(title_x=0.1)
    st.plotly_chart(grafico_hist, use_container_width=True)
 
-with col_graf2:
+with col_graf1:
    grafico_box = px.box(
             df,
             x='PrecoVenda',
-            title='Boxplot de Preços'
+            title='Distribuição de Preços'
    )
-   grafico_hist.update_layout(title_x=0.1)
+   grafico_box.update_layout(title_x=0.1)
    st.plotly_chart(grafico_box, use_container_width=True)
+
+#Informações gerais sobre o Dataset
+col_graf1, col_graf2, col_graf3 = st.columns(3)
+
+st.subheader("Informações sobre o Dataset")
+
+with col_graf1:
+  grafico_boxplot = px.box(
+      df,
+      x='PrecoVenda',
+      y='Vizinhanca',
+      title='Distribuição de Preços por Vizinhança'
+  )
+  grafico_boxplot.update_layout(title_x=0.1)
+  st.plotly_chart(grafico_boxplot, use_container_width=True)
+
+with col_graf2:
+  grafico_boxplot2 = px.box(
+      df,
+      x='PrecoVenda',
+      y='QualidadeGeral',
+      title='Distribuição de Preços por Qualidade'
+  )
+  grafico_boxplot2.update_layout(title_x=0.1)
+  st.plotly_chart(grafico_boxplot2, use_container_width=True)
+
+with col_graf3:
+  grafico_dispercao = px.scatter(
+      df,
+      x='PrecoVenda',
+      y='AreaHabitavel',
+      title='Relação entre Preço e Área Habitável'
+  )  
+  grafico_dispercao.update_layout(title_x=0.1)
+  st.plotly_chart(grafico_dispercao, use_container_width=True)
