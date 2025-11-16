@@ -56,7 +56,7 @@ st.markdown("---")
 st.subheader("Informações sobre o Dataset")
 
 #Informações gerais sobre o Dataset
-col_graf1, col_graf2, col_graf3 = st.columns(3)
+col_graf1, col_graf2 = st.columns(2)
 
 media_por_bairro = df.groupby('Vizinhanca')['PrecoVenda'].mean().reset_index()
 media_por_bairro = media_por_bairro.sort_values(
@@ -89,14 +89,3 @@ with col_graf2:
   )
   grafico_boxplot2.update_layout(title_x=0.1)
   st.plotly_chart(grafico_boxplot2, use_container_width=True)
-
-with col_graf3:
-  grafico_dispercao = px.scatter(
-      df,
-      x='PrecoVenda',
-      y='AreaHabitavel',
-      title='Relação entre Preço e Área Habitável',
-      color='AreaHabitavel'
-  )  
-  grafico_dispercao.update_layout(title_x=0.1)
-  st.plotly_chart(grafico_dispercao, use_container_width=True)
