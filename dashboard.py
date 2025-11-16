@@ -69,7 +69,7 @@ with col_graf1:
   grafico_boxplot.update_layout(title_x=0.1)
   st.plotly_chart(grafico_boxplot, use_container_width=True)
 
-media_por_bairro = df.groupby('Vizinhanca'),['QualidadeGeral'].mean().reset_index()
+media_por_bairro = df.groupby('Vizinhanca')['QualidadeGeral'].mean().reset_index()
 media_por_bairro = media_por_bairro.sort_values(
     by='QualidadeGeral',
     ascending = False
