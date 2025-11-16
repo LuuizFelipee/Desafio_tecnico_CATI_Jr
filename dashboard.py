@@ -53,7 +53,7 @@ with col_graf2:
    st.plotly_chart(grafico_box, use_container_width=True)
 
 st.markdown("---")
-st.subheader("Informações sobre o Dataset")
+st.subheader("Informações sobre Vizinhança")
 
 #Informações gerais sobre o Dataset
 col_graf1, col_graf2 = st.columns(2)
