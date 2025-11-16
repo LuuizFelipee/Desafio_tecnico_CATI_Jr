@@ -29,9 +29,8 @@ col4.metric("Desvio padrão", f"{df['PrecoVenda'].std():.2f}")
 st.markdown("---")
 
 #Principais informações sobre Preço venda
-
-st.subheader("Informações sobre preço venda")
 col_graf1, col_graf2 = st.columns(2)
+st.subheader("Informações sobre preço venda")
 
 with col_graf1:
    grafico_hist = px.histogram(
