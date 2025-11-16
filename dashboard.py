@@ -29,6 +29,7 @@ col4.metric("Desvio padrão", f"{df['PrecoVenda'].std():.2f}")
 st.markdown("---")
 
 #Principais informações sobre Preço venda
+st.subheader("Distribuição dos Preços")
 
 col_graf1, col_graf2 = st.columns(2)
 
@@ -37,7 +38,7 @@ with col_graf1:
             df,
             x='PrecoVenda',
             nbins=30,
-            title="Distribuição de Preços",
+            title="Histograma de Preços",
             labels={'PrecoVenda': 'Preços', 'count': ''}
    )
    grafico_hist.update_layout(title_x=0.1)
@@ -47,7 +48,7 @@ with col_graf2:
    grafico_box = px.box(
             df,
             x='PrecoVenda',
-            title='Distribuição de Preços'
+            title='Boxplot de Preços'
    )
    grafico_hist.update_layout(title_x=0.1)
    st.plotly_chart(grafico_box, use_container_width=True)
