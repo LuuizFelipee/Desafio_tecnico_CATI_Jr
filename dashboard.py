@@ -39,6 +39,16 @@ with col_graf1:
             nbins=30,
             title="Distribuição de Preços",
             labels={'PrecoVenda': 'Preços', 'count': ''}
+            color='PrecoVenda'
    )
    grafico_hist.update_layout(title_x=0.1)
    st.plotly_chart(grafico_hist, use_container_width=True)
+
+with col_graf2:
+   grafico_box = px.box(
+            df,
+            x='PrecoVenda',
+            title='Distribuição de Preços'
+   )
+   grafico_hist.update_layout(title_x=0.1)
+   st.plotly_chart(grafico_box, use_container_width=True)
