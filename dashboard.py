@@ -43,7 +43,7 @@ with col_graf1:
    grafico_hist.update_layout(title_x=0.1)
    st.plotly_chart(grafico_hist, use_container_width=True)
 
-with col_graf1:
+with col_graf2:
    grafico_box = px.box(
             df,
             x='PrecoVenda',
@@ -62,7 +62,8 @@ with col_graf1:
       df,
       x='PrecoVenda',
       y='Vizinhanca',
-      title='Distribuição de Preços por Vizinhança'
+      title='Distribuição de Preços por Vizinhança',
+      color='Vizinhanca'
   )
   grafico_boxplot.update_layout(title_x=0.1)
   st.plotly_chart(grafico_boxplot, use_container_width=True)
@@ -72,7 +73,8 @@ with col_graf2:
       df,
       x='PrecoVenda',
       y='QualidadeGeral',
-      title='Distribuição de Preços por Qualidade'
+      title='Distribuição de Preços por Qualidade',
+      color='QualidadeGeral'
   )
   grafico_boxplot2.update_layout(title_x=0.1)
   st.plotly_chart(grafico_boxplot2, use_container_width=True)
@@ -82,7 +84,8 @@ with col_graf3:
       df,
       x='PrecoVenda',
       y='AreaHabitavel',
-      title='Relação entre Preço e Área Habitável'
+      title='Relação entre Preço e Área Habitável',
+      color='AreaHabitavel'
   )  
   grafico_dispercao.update_layout(title_x=0.1)
   st.plotly_chart(grafico_dispercao, use_container_width=True)
