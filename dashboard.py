@@ -30,6 +30,7 @@ st.markdown("---")
 
 #Principais informações sobre Preço venda
 
+st.subheader("Informações sobre preço venda")
 col_graf1, col_graf2 = st.columns(2)
 
 with col_graf1:
@@ -52,10 +53,11 @@ with col_graf2:
    grafico_box.update_layout(title_x=0.1)
    st.plotly_chart(grafico_box, use_container_width=True)
 
+st.markdown("---")
 #Informações gerais sobre o Dataset
 col_graf1, col_graf2, col_graf3 = st.columns(3)
 
-st.title("Informações sobre o Dataset")
+st.subheader("Informações sobre o Dataset")
 
 with col_graf1:
   grafico_boxplot = px.box(
