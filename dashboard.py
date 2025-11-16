@@ -55,7 +55,7 @@ with col_graf2:
 #Informações gerais sobre o Dataset
 col_graf1, col_graf2, col_graf3 = st.columns(3)
 
-st.subheader("Informações sobre o Dataset")
+st.title("Informações sobre o Dataset")
 
 with col_graf1:
   grafico_boxplot = px.box(
