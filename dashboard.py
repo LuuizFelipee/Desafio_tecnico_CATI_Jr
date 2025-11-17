@@ -96,7 +96,7 @@ media_por_zoneamento = media_por_zoneamento.sort_values(
     ascending = False
 )
 
-grafico_dispercao_zoneamento = px.scatter(
+grafico_dispercao_zoneamento = px.bar(
     media_por_zoneamento,
     x='PrecoVenda',
     y='Zoneamento',
