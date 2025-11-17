@@ -116,7 +116,7 @@ with col_graf1:
       df,
       x='AnoConstrucao',
       y='PrecoVenda',
-      title='Relação entre ano e preço',
+      title='Relação entre ano de construção e preço',
       color='AnoConstrucao'
   )
   grafico_scatter.update_layout(title_x=0.1)
