@@ -91,7 +91,7 @@ with col_graf2:
   st.plotly_chart(grafico_boxplot2, use_container_width=True)
 
 with col_graf1:
-  grafico_dispercao_zoneamento = px.bar(
+  grafico_dispercao_zoneamento = px.scatter(
       df,
       x='PrecoVenda',
       y='Zoneamento',
