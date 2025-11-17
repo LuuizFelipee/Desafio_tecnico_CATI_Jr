@@ -38,6 +38,7 @@ df_casas_limpa = df_casas.drop()
 Após isso para uma melhor vizualização traduzi o nome das colunas que restaram 
 e os seus valores utilizando: 
 ```python
+df_casas_traduzido = df_casas_limpa.rename('colunas)
 df_casas_traduzido['coluna'].replace(mapa_substituicao)
 ```
 
@@ -68,3 +69,6 @@ df_casas_final = df_casas_com_preco[(df_casas_com_preco['PrecoVenda'] >= limite_
 <img width="520" height="455" alt="image" src="https://github.com/user-attachments/assets/80b03713-a84f-46aa-b6bb-e670c7d6ee8a" />
 
 
+## Etapa 3: Alguns Gráficos e Dashboard
+Nessa etapa gerei alguns gráficos para vizualizar e comprovar algumas relações que fazem sentido
+e influenciam no Preço de venda das casa:
