@@ -71,4 +71,21 @@ df_casas_final = df_casas_com_preco[(df_casas_com_preco['PrecoVenda'] >= limite_
 
 ## Etapa 3: Alguns Gráficos e Dashboard
 Nessa etapa gerei alguns gráficos para vizualizar e comprovar algumas relações que fazem sentido
-e influenciam no Preço de venda das casa:
+e influenciam no Preço de venda das casa e fiz um dashboard para demonstrar esses graficos com a segute estrutura:
+
+- <b>Informações gerais sobre o Preço Venda</b>:
+Na parte inicial, inseri algumas métricas principais do preço das casa com informaçãos como média, menor preço, maior preço e desvio padrão, além dos gráficos mostrados anteriormente do histograma e boxplot
+
+- <b>Informações gerais sobre vizinhança</b>:
+Nessa parte busquei relacionar como o bairro afeta o valor das casas, para isso utilizei tres gráficos:
+
+1. Distribuição de Preços por vizinhança: Histograma comparando os bairros se baseando na média dos preços entre eles.
+<img width="624" height="455" alt="Sem título" src="https://github.com/user-attachments/assets/a7f79fa8-cf9c-46e6-b24b-14945cd5c119" />
+
+2. Distribuição de Qualidade por vizinhanca: Histograma comparando os bairros se baseando na média da qualidade entre elas.
+<img width="624" height="455" alt="Sem título" src="https://github.com/user-attachments/assets/a626621a-3893-4f09-bbd9-d46dab0c7fa7" />
+
+
+ 
+
+
