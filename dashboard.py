@@ -90,6 +90,12 @@ with col_graf2:
   grafico_boxplot2.update_layout(title_x=0.1)
   st.plotly_chart(grafico_boxplot2, use_container_width=True)
 
+media_por_zoneamento = df.groupby('Zoneamento')['PrecoVenda'].mean().reset_index()
+media_por_zoneamento = media_por_zoneamento.sort_values(
+    by='PrecoVenda',
+    ascending = False
+)
+
 with col_graf1:
   grafico_dispercao_zoneamento = px.scatter(
       df,
