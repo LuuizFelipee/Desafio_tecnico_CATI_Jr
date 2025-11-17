@@ -105,3 +105,30 @@ grafico_dispercao_zoneamento = px.bar(
 )
 grafico_dispercao_zoneamento.update_layout(title_x=0.1)
 st.plotly_chart(grafico_dispercao_zoneamento, use_container_width=True)
+
+st.markdown("---")
+st.subheader("Relação entre ano e preço")
+
+col_graf1, col_graf2 = st.columns(2)
+
+with col_graf1:
+  grafico_scatter = px.scatter(
+      df,
+      x='AnoConstrucao',
+      y='PrecoVenda',
+      title='Relação entre ano e preço',
+      color='AnoConstrucao'
+  )
+  grafico_scatter.update_layout(title_x=0.1)
+  st.plotly_chart(grafico_scatter, use_container_width=True)
+
+with col_graf2:
+  grafico_scatter = px.scatter(
+      df,
+      x='AnoReforma',
+      y='PrecoVenda',
+      title='Relação entre ano reforma e preço',
+      color='AnoReforma'
+  )
+  grafico_scatter.update_layout(title_x=0.1)
+  st.plotly_chart(grafico_scatter, use_container_width=True)
