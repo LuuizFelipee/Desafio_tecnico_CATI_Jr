@@ -64,6 +64,7 @@ media_por_bairro = media_por_bairro.sort_values(
     ascending = False
 )
 with col_graf1:
+  """
   grafico_boxplot = px.bar(
       media_por_bairro,
       x='PrecoVenda',
@@ -73,13 +74,14 @@ with col_graf1:
   )
   grafico_boxplot.update_layout(title_x=0.1)
   st.plotly_chart(grafico_boxplot, use_container_width=True)
-
+ """
 media_por_bairro = df.groupby('Vizinhanca')['QualidadeGeral'].mean().reset_index()
 media_por_bairro = media_por_bairro.sort_values(
     by='QualidadeGeral',
     ascending = False
 )
 with col_graf2:
+  """
   grafico_boxplot2 = px.bar(
       media_por_bairro,
       x='QualidadeGeral',
@@ -89,7 +91,15 @@ with col_graf2:
   )
   grafico_boxplot2.update_layout(title_x=0.1)
   st.plotly_chart(grafico_boxplot2, use_container_width=True)
-
+  """
+    sns.barplot(
+    x='QualidadeGeral',
+    y='Vizinhanca',
+    data=media_por_bairro,
+    hue= 'Vizinhanca'
+    )
+plt.title("Relação entre Vizinhança por Qualidade")
+plt.show()
 media_por_zoneamento = df.groupby('Zoneamento')['PrecoVenda'].mean().reset_index()
 media_por_zoneamento = media_por_zoneamento.sort_values(
     by='PrecoVenda',
