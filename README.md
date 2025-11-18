@@ -4,6 +4,8 @@ Esta análise exploratória de dados (EDA) e o dashboard foram desenvolvidos par
 
 Neste desafio, foram disponibilizados dois datasets (um de treino e um de teste) com informações detalhadas de inúmeras casas. O objetivo principal é analisar os fatores que exercem maior influência sobre o preço dos imóveis. Para isso, a análise foi conduzida em etapas, detalhadas a seguir.
 
+Acesse o dashboard por esse link: https://desafiotecnicocatijr.streamlit.app/
+
 ## Etapa 1: Conhecendo o Dataset
 
 O primeiro passo foi identificar as informações contidas no dataset, verificando as colunas e os valores disponíveis. Como não havia familiaridade com todas as regras de negócio e termos específicos, utilizei o Gemini para obter a descrição e o significado de cada coluna.
